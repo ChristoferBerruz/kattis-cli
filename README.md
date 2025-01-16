@@ -2,14 +2,47 @@
 
 Kattis online judge command line tool written in Python. Requires Python 3.
 
-# Install the client
+# Download the repo
 
 Run `git clone https://github.com/Kattis/kattis-cli` to clone the repository.
+
+# Using the client from the cloned repo
 To run the client directly, `cd` into the `kattis-cli` directory and run `python submit.py`.
 
 See the section for your operating system below for instructions on how to install the submission client as a command runnable from anywhere on your file system.
 
 If the `python` command is not installed, try using `python3` instead.
+
+# Building a wheel and installing the client in a virtualenv
+
+You need to have `wheel` as a dependency. You can install it using
+```code
+pip install wheel
+```
+
+In order to build the package, you can simply run
+```code
+python setup.py bdist_wheel
+```
+
+This will generate a wheel object. Once you have a wheel object, you can create a virtualenv using your method of choice and simply install
+the wheel **inside the virtualenv** by doing.
+
+```code
+pip install <wheel_path>
+```
+
+Inside your virtual environment, you can use the kattis-cli package
+using the name
+
+```code
+kattis-cli
+```
+
+Double check the installation was successful by doing
+```code
+kattis-cli --help
+```
 
 ## Windows
 
